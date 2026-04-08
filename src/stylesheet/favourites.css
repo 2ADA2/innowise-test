@@ -1,0 +1,97 @@
+.sidebar {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.sidebar h3, .sidebar span{
+    margin: 0;
+    font-size: 24px;
+}
+
+#fav-info {
+    display: block;
+    color: #666;
+    font-size: 14px;
+}
+
+.sidebar-header {
+    display: flex;
+    gap:16px;
+    padding: 16px;
+    border-bottom: 2px solid var(--background-lite-color);
+}
+
+.sidebar-header div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.fav-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: var(--background-green-color);
+    border-radius: 16px;
+}
+
+.fav-icon img{
+    width: 30px;
+}
+
+
+.sidebar-body {
+    padding: 0 16px;
+}
+
+.fav-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 12px 0;
+    position: relative;
+}
+
+.fav-item:after{
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: var(--background-green-color);
+}
+
+.fav-cover {
+    width: 40px;
+    height: 50px;
+    border-radius: 6px;
+    object-fit: cover;
+    background: #ddd;
+}
+
+.fav-text {
+    flex: 1;
+}
+
+.fav-title {
+    margin: 0;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.fav-author,
+.fav-year {
+    margin: 0;
+    font-size: 12px;
+    color: #888;
+}
+
+.fav-heart {
+    font-size: 16px;
+    color: red;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library</title>
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo"><img src="./src/assets/white-book-svgrepo-com.svg"></div>
+  <div>
+    <div class="title">The Library</div>
+    <div class="subtitle">Discover your next favorite book</div>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>Discover Your Next Great Read</h1>
+  <p>Search millions of books, build your personal library</p>
+  <div class="search">
+    <input id="search-field" type="text" placeholder="Search books...">
+  </div>
+</section>
+
+<div class="container">
+  <div id="catalogue">
+  </div>
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="fav-icon">
+        <img src="./src/assets/favorite.svg">
+      </div>
+      <div>
+        <h3>Favorites</h3>
+        <span id="fav-info">3 books saved</span>
+      </div>
+    </div>
+    <div class = "sidebar-body">
+      <div class="fav-item">
+        <img class="fav-cover" src="hobbit.jpg" alt="The Hobbit">
+        <div class="fav-text">
+          <p class="fav-title">The Hobbit</p>
+          <p class="fav-author">J.R.R. Tolkien</p>
+          <p class="fav-year">1937</p>
+        </div>
+      </div>
+
+      <div class="fav-item">
+        <img class="fav-cover" src="dune.jpg" alt="Dune">
+        <div class="fav-text">
+          <p class="fav-title">Dune</p>
+          <p class="fav-author">Frank Herbert</p>
+          <p class="fav-year">1965</p>
+        </div>
+      </div>
+
+      <div class="fav-item">
+        <img class="fav-cover" src="pride.jpg" alt="Pride and Prejudice">
+        <div class="fav-text">
+          <p class="fav-title">Pride and Prejudice</p>
+          <p class="fav-author">Jane Austen</p>
+          <p class="fav-year">1813</p>
+        </div>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  Powered by Open Library
+</footer>
+
+<script src="src/scripts/main.js" type="module"></script>
+<script src="src/scripts/search.js" type="module"></script>
+
+</body>
+</html>
