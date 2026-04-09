@@ -1,8 +1,8 @@
 import {updateFavs} from "../../utils/update.js";
 
-const notInFavs = "./src/assets/notInFavs.svg";
-const inFavs = "./src/assets/inFavs.svg";
-const placeholder = "./src/assets/book_placeholder.png";
+const notInFavs = "/assets/notInFavs.svg";
+const inFavs = "/assets/inFavs.svg";
+const placeholder = "/assets/book_placeholder.png";
 
 export function setPlaceholder(img) {
     img.onerror = null;
