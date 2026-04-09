@@ -1,5 +1,8 @@
 @import "stylesheet/main.css";
 @import "stylesheet/favourites.css";
+@import "stylesheet/mainCard.css";
+@import "stylesheet/favCard.css";
+
 :root {
     --main-green-color: #285541;
     --background-lite-color: #f5f5f0;

@@ -2,14 +2,21 @@
     background: white;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    width: 250px;
     height: 100%;
+    max-height: 100vh;
     font-family: Arial, sans-serif;
 }
 
-.sidebar h3, .sidebar span{
+@media (max-width: 1000px) {
+    .sidebar {
+        height: 260px;
+    }
+
+;
+}
+
+.sidebar h3, .sidebar span {
     margin: 0;
-    font-size: 24px;
 }
 
 #fav-info {
@@ -20,12 +27,12 @@
 
 .sidebar-header {
     display: flex;
-    gap:16px;
+    gap: 16px;
     padding: 16px;
     border-bottom: 2px solid var(--background-lite-color);
 }
 
-.sidebar-header div{
+.sidebar-header div {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -41,13 +48,40 @@
     border-radius: 16px;
 }
 
-.fav-icon img{
+.fav-icon img {
     width: 30px;
 }
 
-
 .sidebar-body {
-    padding: 0 16px;
+    padding: 0;
+    margin: 4px;
+    overflow-y: auto;
+    height: calc(100vh - 92px);
+    border-radius: 4px;
+}
+
+@media (max-width: 1000px) {
+    .sidebar-body {
+        display: flex;
+        overflow-x: auto;
+        height: 200px;
+    }
+
+;
+
+    .sidebar .sidebar-body .fav-card {
+    }
+
+    .fav-card button {
+        left: 4px;
+        width: 24px;
+        height: 24px;
+    }
+
+    .fav-card button img {
+        width: 18px;
+        height: 18px;
+    }
 }
 
 .fav-item {
@@ -58,7 +92,7 @@
     position: relative;
 }
 
-.fav-item:after{
+.fav-item:after {
     content: "";
     display: block;
     height: 2px;

@@ -6,7 +6,7 @@ export default function mainCard(book) {
 
     card.innerHTML = `
         <div class="card-cover">
-            <button class="fav-button"><img src="${checkFav(book.id)}"></button>
+            <button class="fav-button" id="mf-${book.id}"><img src="${checkFav(book.id)}"></button>
             <img src="${book.cover}" alt="${book.title}" class="main-card-cover"/>
         </div>
         <div class="card-info">
@@ -19,7 +19,9 @@ export default function mainCard(book) {
     const img = card.getElementsByClassName('main-card-cover')[0];
     img.onerror = () => setPlaceholder(img);
 
-    card.querySelector("button").addEventListener('click', (e) => {setInFavs(e,book)})
+    card.querySelector("button").addEventListener('click', (e) => {
+        setInFavs(e, book)
+    })
 
     return card;
 }

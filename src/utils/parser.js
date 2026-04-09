@@ -6,6 +6,6 @@ export function parseBooks(data) {
         cover: book.cover_i
             ? `https://covers.openlibrary.org/b/id/${book.cover_i}.jpg`
             : null,
-        id:book.title + book.author + book.year
+        id: book.title + book.author + book.year
     }));
 }

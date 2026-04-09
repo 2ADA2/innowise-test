@@ -1,0 +1,59 @@
+.fav-card {
+    position: relative;
+    display: flex;
+    gap: 16px;
+    height: 150px;
+    border-bottom: 2px solid var(--background-green-color);
+    margin: 4px 16px;
+    padding: 8px 4px;
+}
+
+.fav-card-cover img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.fav-card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+}
+
+.fav-card-cover {
+    position: relative;
+}
+
+.fav-card-year {
+    font-size: 10px;
+    color: #777;
+}
+
+.fav-card-author {
+    font-size: 12px;
+    color: #777;
+}
+
+@media (max-width: 1000px) {
+    .fav-card {
+        border: none;
+        border-right: 2px solid var(--background-green-color);
+        width: 180px;
+        min-width: 180px;
+        gap: 4px;
+        margin: 2px;
+    }
+
+    .fav-card-title {
+        font-size: 12px;
+    }
+
+    .fav-card-info {
+        font-size: 10px;
+    }
+
+    .fav-card-year {
+        font-size: 8px;
+    }
+
+}
