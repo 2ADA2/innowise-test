@@ -3,10 +3,21 @@
 A simple JavaScript application for searching books using an external API, displaying results, and managing a list of favorite books stored in `localStorage`.
 
 ---
-
+# Task
+this is a [test project](https://drive.google.com/file/d/1RBRcuH-_oAvtjem5Xs0c4NXZ8I38aYyH/view) for innowise
 # How to start development server
 ```bash
 npm run dev
+```
+
+before staring the server you must install dependencies:
+```bash
+npm i
+```
+
+Production build command:
+```bash
+vite build
 ```
 
 ## 🚀 Features
