@@ -21,8 +21,14 @@ function update(books) {
 }
 
 export function filterByAuthor(author) {
-    const filteredBooks = books.filter((book) => book.author.includes(author));
-    update(filteredBooks);
+    try{
+        author = author.toLowerCase().split(" ").join("");
+        const filteredBooks = books.filter((book) => book.author.toLowerCase().split(" ").join("").includes(author));
+        update(filteredBooks);
+    }catch {
+        update(books);1
+    }
+
 }
 
 const container = document.getElementById('catalogue');

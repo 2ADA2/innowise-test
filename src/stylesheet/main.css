@@ -118,6 +118,10 @@ footer {
     .container {
         display: flex;
         flex-direction: column-reverse;
-        padding: 4px;
+        padding:2px;
+    }
+
+    .hero{
+        padding: 0 16px;
     }
 }
