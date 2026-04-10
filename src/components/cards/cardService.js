@@ -2,7 +2,7 @@ import {updateFavs} from "../../utils/update.js";
 
 const notInFavs = "/assets/notInFavs.svg";
 const inFavs = "/assets/inFavs.svg";
-const placeholder = "/assets/book_placeholder.png";
+export const placeholder = "/assets/book_placeholder.png";
 
 export function setPlaceholder(img) {
     img.onerror = null;

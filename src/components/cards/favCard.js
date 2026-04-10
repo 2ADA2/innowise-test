@@ -1,4 +1,4 @@
-import {checkFav, setInFavs, setPlaceholder} from "./cardService.js";
+import {checkFav, placeholder, setInFavs, setPlaceholder} from "./cardService.js";
 
 export default function favCard(book) {
     const card = document.createElement('div');
@@ -7,11 +7,9 @@ export default function favCard(book) {
     let title = book.title.length > 50 ? book.title.substring(0, 50) + '...' : book.title;
     let author = book.author.length > 30 ? book.author.substring(0, 30) + '...' : book.author;
 
-    let au
-
     card.innerHTML = `
         <div class="fav-card-cover">
-            <img src="${book.cover}" alt="${book.title}" class="fav-card-cover"/>
+            <img src="${book.cover || placeholder}" alt="${book.title}" class="fav-card-cover"/>
         </div>
         <div class="fav-card-info">
             <h5 class="fav-card-title">${title}</h5>

@@ -1,5 +1,5 @@
 import loadingComponent from "../components/loading/loadingComponents.js";
-import updateMain from "../utils/update.js";
+import updateMain, {filterByAuthor} from "../utils/update.js";
 
 const searchField = document.getElementById('search-field');
 const container = document.getElementById('catalogue');
@@ -23,3 +23,21 @@ searchField.addEventListener('keyup', e => {
     search(e.target.value)
 })
 
+const filterField = document.getElementById('filter-field');
+let filterTimer = null;
+let isFilters = false
+
+function startFilter(text) {
+    clearTimeout(filterTimer)
+    filterTimer = setTimeout(() => {
+        isLoading = false
+        filterByAuthor(text)
+    }, 1000)
+}
+
+filterField.addEventListener('keyup', e => {
+    if (!isFilters) {
+        isFilters = true
+    }
+    startFilter(e.target.value)
+})

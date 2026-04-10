@@ -7,6 +7,23 @@ import favCard from "../components/cards/favCard.js";
 
 const apiUrl = import.meta.env.VITE_API_URL;
 const search = import.meta.env.VITE_SEARCH;
+let books = []
+
+function update(books) {
+    container.innerHTML = ``;
+    if (books.length === 0) {
+        container.appendChild(notFoundComponent());
+    }
+    books.slice(0, 20).forEach(book => {
+        const card = mainCard(book);
+        container.appendChild(card);
+    });
+}
+
+export function filterByAuthor(author) {
+    const filteredBooks = books.filter((book) => book.author.includes(author));
+    update(filteredBooks);
+}
 
 const container = document.getElementById('catalogue');
 container.appendChild(loadingComponent());
@@ -16,17 +33,8 @@ export default async function updateMain(text) {
     try {
         const req = await fetch(apiUrl + search + text);
         const body = await req.json();
-        const books = parseBooks(body);
-
-        container.innerHTML = ``;
-        if (books.length === 0) {
-            container.appendChild(notFoundComponent());
-        }
-        books.slice(0, 20).forEach(book => {
-            const card = mainCard(book);
-            container.appendChild(card);
-        });
-
+        books = parseBooks(body);
+        update(books)
     } catch (err) {
         container.innerHTML = ``;
         let errorText = "Something went wrong"

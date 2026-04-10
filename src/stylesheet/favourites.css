@@ -3,7 +3,7 @@
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     height: 100%;
-    max-height: 100vh;
+    max-height: 500px;
     font-family: Arial, sans-serif;
 }
 
@@ -60,27 +60,26 @@
     border-radius: 4px;
 }
 
+.fav-card button {
+    right: 4px;
+    width: 24px;
+    height: 24px;
+}
+
+.fav-card button img {
+    width: 18px;
+    height: 18px;
+}
+
 @media (max-width: 1000px) {
     .sidebar-body {
         display: flex;
         overflow-x: auto;
-        height: 200px;
-    }
-
-;
-
-    .sidebar .sidebar-body .fav-card {
+        height: 170px;
     }
 
     .fav-card button {
         left: 4px;
-        width: 24px;
-        height: 24px;
-    }
-
-    .fav-card button img {
-        width: 18px;
-        height: 18px;
     }
 }
 
